@@ -20,9 +20,9 @@ body {
 }
 .social {
   width: 50%;
-  height: 320px;
   margin-left: 20px;
   padding: 20px;
+  padding-bottom: 0;
   background-color: rgba(0, 0, 0, 0.6);
   color: #fff;
   float: left;
@@ -47,6 +47,9 @@ body {
 }
 .social a.instagram {
   background-image: url('images/instagram.png');
+}
+.social a:last-child {
+  float: none;
 }
 .banner {
   height: 100vh;
@@ -104,7 +107,7 @@ input, textarea {
 }
 .form input {
   height: 40px;
-  line-height: 30px;
+  line-height: 24px;
 }
 .form textarea {
   height: 100px;
@@ -235,21 +238,15 @@ footer p {
 @media only screen and (max-width: 480px) {
   .social {
     float: none;
-    height: 180px;
+    padding-bottom: 0;
     text-align: center;
   }
   .social p {
     display: none;
   }
   .social a {
-    font-size: 5vw;
     text-align: center;
-  }
-  .social a:last-child {
-    width: 100%;
-    text-align: center;
-    clear: both;
-    padding-top: 10px;
+    font-size: clamp(16px, 5vw, 5vw);
   }
   .social a.facebook {
     float: left;
@@ -260,5 +257,11 @@ footer p {
     float: right;
     margin-right: 10px;
     color: #fff;
+  }
+  .social a:last-child {
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    height: 60px;
   }
 }
