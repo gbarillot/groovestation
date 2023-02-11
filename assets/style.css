@@ -12,20 +12,40 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  min-width: 335px;
 }
-a.social {
-  display: none;
-  width: 50px;
-  height: 50px;
-  background-image: url('images/social.png');
+.clearfix {
+  clear: both;
+}
+.social {
+  width: 50%;
+  height: 320px;
+  margin-left: 20px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  float: left;
+}
+.social p {
+  font-size: 20px;
+}
+.social a {
+  width: 100px;
+  height: 100px;  
   background-repeat: no-repeat;
-  background-size: 180px;
-  position: fixed;
-  top: 20px;
-  right: 5px;
+  background-size: 100px;
+  display: block;
+  float: left;
+  margin-right: 50px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 30px;
 }
-.facebook {
-  background-position: 10px 10px;
+.social a.facebook {
+  background-image: url('images/facebook.png');
+}
+.social a.instagram {
+  background-image: url('images/instagram.png');
 }
 .banner {
   height: 100vh;
@@ -33,19 +53,16 @@ a.social {
 .baseline {  
   color: #fff;
   display: inline-block;
-  float: right;
-  padding-right: 50px;
+  padding-left: 20px;
   text-shadow: 0px 0px 4px rgba(0, 0, 0, 1);
   margin-top: 10vh;
-  text-align: right;
 }
 .baseline p {
-  font-size: 1.5vw;
+  font-size: 2.5vw;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
 } 
 .baseline h1 {  
   color: #fff;
-  float: right;
   padding-right: 50px;
   text-shadow: 0px 0px 4px rgba(0, 0, 0, 1);
   font-size: 6vw;
@@ -59,13 +76,17 @@ a.social {
   color: #fff;
   width: 30vw;
   max-width: 480px;
-  margin: 10vh 0 0 20px;
-  float: left;
+  margin: 0vh 20px 0 auto;
+  float: right;
   height: auto;
-  text-align: center;
+  text-align: left;
   padding: 20px;
   border-radius: 2px;
   font-weight: 200;
+}
+.form p {
+  font-size: 20px;
+  font-weight: 0;
 }
 .form .inner {
   width: 100%;
@@ -121,10 +142,11 @@ input, textarea {
   display: flex;
   flex-direction: row;
   flex-wrap:wrap; 
+  justify-content: space-between;
 }
 .gallery img {
   width: 30%;
-  padding: 20px;
+  margin-bottom: 3vw;
   padding-left: 0;
 }
 footer {
@@ -150,11 +172,17 @@ footer p {
     text-align: center;
     height: auto;
   }
+  .social {
+    float: none;
+    margin: 10vh auto 0 auto;
+    width: 90%;
+    max-width: none;
+    margin-bottom: 60px;
+    text-align: left;
+  }
   .baseline {
-    text-align: center;
     float: none;
     margin: 5vh auto 0 auto;
-    text-align: center;
     padding-left: 20px;
   }
   .baseline p {
@@ -167,7 +195,7 @@ footer p {
   .form {
     float: none;
     margin: 10vh auto 0 auto;
-    width: 80%;
+    width: 90%;
     max-width: none;
     margin-bottom: 60px;
   }
@@ -179,12 +207,11 @@ footer p {
   .page ul {
     padding-left: 14px;
   }
-  .page .inner img {
-    float: none;
-    margin: 0 auto 50px auto;
-  }
   .page .inner p {
     text-align: left;
+  }
+  .gallery img {
+    width: 45%;
   }
   footer {
     height: auto;
@@ -193,5 +220,32 @@ footer p {
     display: block;
     padding: 10px;
     width: 90%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .gallery img {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .social p {
+    display: none;
+  }
+  .social a {
+    font-size: 6vw;
+  }
+  .social a.facebook {
+    float: left;
+    margin-left: 20px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 30px;
+  }
+  .social a.instagram {
+    float: right;
+    margin-right: 30px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 30px;
   }
 }
