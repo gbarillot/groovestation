@@ -3,7 +3,7 @@ save = function() {
   data.append("email", document.getElementById("input-1").value);
   data.append("message", document.getElementById("input-2").value);
  
-  fetch("https://formkeep.com/f/49a4647645e4", {
+  fetch("https://formspree.io/f/xayzedzo", {
     method: "POST",
     body: data
   }).then((result) => {
