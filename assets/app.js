@@ -19,3 +19,7 @@ save = function() {
     }, 0)
   }) 
 }
+
+load = function() {
+  document.getElementById('target').text = "contact" + "@" + "groovestation" + ".live"
+}
