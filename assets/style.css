@@ -213,6 +213,9 @@ footer p {
   .gallery img {
     width: 45%;
   }
+  .gallery img:last-child {
+    display: none;
+  }
   footer {
     height: auto;
   }
