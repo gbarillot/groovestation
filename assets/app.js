@@ -8,13 +8,13 @@ save = function() {
     body: data
   }).then((result) => {
     if (result.status != 200) { 
-      alert("Une errur est survenue"); 
+      alert("Une erreur est survenue"); 
     }
   }).then((response) => {
     document.getElementById("input-1").value = '';
     document.getElementById("input-2").value = '';
     setTimeout(function() {
-      alert("J'ai bien reçu votre message, je vous répondrai dès que possible !")
+      alert("Nous avons bien reçu votre message et vous répondrons dès que possible !")
     }, 0)
   }) 
 }
