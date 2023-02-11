@@ -104,7 +104,7 @@ input, textarea {
 }
 .form input {
   height: 40px;
-  line-height: 40px;
+  line-height: 30px;
 }
 .form textarea {
   height: 100px;
