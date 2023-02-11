@@ -2,8 +2,9 @@ save = function() {
   var data = new FormData();
   data.append("email", document.getElementById("input-1").value);
   data.append("message", document.getElementById("input-2").value);
- 
-  fetch("https://formspree.io/f/xayzedzo", {
+  data.append("_gotcha", "")
+
+  fetch("https://getform.io/f/91e67867-c37b-4aa8-b449-6dfbe0782c4d", {
     method: "POST",
     body: data
   }).then((result) => {
