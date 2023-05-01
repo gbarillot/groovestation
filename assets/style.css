@@ -59,20 +59,27 @@ body {
   display: inline-block;
   padding-left: 20px;
   text-shadow: 0px 0px 4px rgba(0, 0, 0, 1);
-  margin-top: 10vh;
+  margin-top: 5vh;
 }
-.baseline p {
-  font-size: 2.5vw;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
-} 
 .baseline h1 {  
   color: #fff;
-  padding-right: 50px;
+  height: 100px;
   text-shadow: 0px 0px 4px rgba(0, 0, 0, 1);
   font-size: 6vw;
   margin: 0;
   padding: 0;
+  padding-top: 25px;
   line-height: 4vw;
+  text-indent: 120px;
+  background-image: url('images/groovestation.png');
+  background-repeat: no-repeat;
+  background-size: 100px;
+}
+.baseline h2 {  
+  font-size: 2.5vw;
+  padding-left: 10px;
+  font-weight: normal;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
 }
 
 .form {
@@ -168,7 +175,23 @@ footer p {
   margin: 0;
   color: #999;  
 }
-
+@media only screen and (max-width: 800px) {
+  .baseline {
+    padding: 0 !important;
+    margin: auto;
+  }
+  .baseline h1 {
+    color: transparent;
+    text-shadow: none;
+    height: 60vw;
+    background-size: contain; 
+    text-align: center;
+    background-position: center;
+    padding-top: 60vw;
+    padding: 0;
+    text-indent: 0px;
+  }
+}
 @media only screen and (max-width: 996px) {
   .social.linkedin {
     position: absolute;
@@ -188,14 +211,15 @@ footer p {
   .baseline {
     float: none;
     margin: 5vh auto 0 auto;
-    padding-left: 20px;
-  }
-  .baseline p {
-    font-size: 20px;
+    padding-left: 20px;    
   }
   .baseline h1 {
     font-size: 80px;
     line-height: 90px;
+    padding-top: 5px;
+  }
+  .baseline h2 {
+    font-size: 4vw;
   }
   .form {
     float: none;
@@ -236,6 +260,9 @@ footer p {
   }
 }
 @media only screen and (max-width: 480px) {
+  .baseline h2 {
+    font-size: 16px;
+  }
   .social {
     float: none;
     padding-bottom: 0;
@@ -263,5 +290,10 @@ footer p {
     text-align: center;
     padding-top: 10px;
     height: 60px;
+  }
+}
+@media only screen and (max-width: 330px) {
+  .baseline h1 {
+    height: 200px !important 
   }
 }
