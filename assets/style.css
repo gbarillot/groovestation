@@ -14,7 +14,7 @@ body {
   padding: 0;
   width: 100%;
   min-width: 330px;  
-  overflow: auto;
+  overflow: scroll;
 }
 .clearfix {
   clear: both;
