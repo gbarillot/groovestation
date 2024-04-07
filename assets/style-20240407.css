@@ -59,7 +59,7 @@ nav .burger span {
   display: block;
   width: 80%;
   height: 4px;
-  margin: 8px auto 10px auto;
+  margin: 7px auto 10px auto;
   padding: 0;
   background-color: #666;  
 }
@@ -234,13 +234,19 @@ input, textarea {
 }
 .content {
   background-color: #fff;
-  margin: -18px auto 100px auto;
+  margin: -20px auto 100px auto;
   max-width: 1024px;
   min-height: 80vh;
   text-align: left;
 }
 .content.video {
   text-align: center;
+}
+.content iframe {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  aspect-ratio: 16 / 9;
 }
 .date {
   clear: both;
@@ -323,6 +329,22 @@ footer p {
   }
   nav ul.dropped li:last-child {
     border-bottom: none
+  }
+  .container {
+    border: 0;
+    background-color: #fff;
+  }
+  .content {
+    padding: 0 20px;
+    padding-top: 0; 
+  }
+  .page {
+    padding-top: 20px;
+  }  
+  .content .date .desc , .content .date .gmap{
+    float: none;
+    width: 100%;
+    margin-bottom: 20px;
   }
   .social.linkedin {
     position: absolute;
