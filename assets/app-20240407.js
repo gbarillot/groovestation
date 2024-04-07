@@ -20,6 +20,10 @@ save = function() {
   }) 
 }
 
+toggleMenu = function() {
+  document.getElementById('menu').classList.toggle("dropped");
+}
+
 load = function() {
   document.getElementById('target').text = "contact" + "@" + "groovestation" + ".live"
 }
