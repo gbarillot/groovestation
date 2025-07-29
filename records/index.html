@@ -51,7 +51,7 @@
     <div class="content">
       <div class="date">
         <h2>18 Octobre 2024 Ide Ale</h2>
-        <audio controls src="files/ideale_2024_none.mp3" style="width: 100%; margin-bottom: 20px;" id="file1"></audio>
+        <audio controls src="https://files.groovestation.live/files/ideale_2024_none.mp3" style="width: 100%; margin-bottom: 20px;" id="file1"></audio>
         <div class="desc">
           <ul>
             <li><a href="/" onclick="seekTo('file1', 1); return false">Pick up the pieces</a></li>
@@ -130,7 +130,7 @@ function seekTo(player, seconds) {
 function remove(player, instrument) {
   console.log(instrument);
   var audio = document.getElementById(player);
-  audio.src = 'files/ideale_2024_' + instrument + '.mp3'
+  audio.src = 'https://files.groovestation.live/files/ideale_2024_' + instrument + '.mp3'
 }
 </script>
 
