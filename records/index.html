@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Groove Station, Live Funky music à Lyon et sa région</title>
+<meta name="description" content="Groove Station, Live Funky music autour de Lyon et sa région" >
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="True" name="HandheldFriendly">
+
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+<link rel="manifest" href="assets/favicon/site.webmanifest">
+<link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="assets/favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:url"                content="https://groovestation.live/" />
+<meta property="og:type"               content="article" />
+<meta property="og:title"              content="Groove Station" />
+<meta property="og:description"        content="Live Funky Music à Lyon et sa région" />
+<meta property="og:image"              content="https://groovestation.live/assets/images/groovestation.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;700&display=swap" rel="stylesheet">
+
+<link href="assets/style-20240407-2.css" rel="stylesheet" type="text/css" />
+<script src="assets/app-20240407-1.js"></script>
+</head>
+<body>
+<nav>
+  <a href="#/" class="burger" onClick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </a>
+  <a href="/" class="brand">
+    <img src="assets/images/groovestation.png" />
+    <p>Groove Station</p>
+  </a>
+  <ul id="menu">
+    <li class="active"><a href="/">Enregistrements</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+  <div class="page">
+    <div class="content">
+      <div class="date">
+        <h2>18 Octobre 2024 Ide Ale</h2>
+        <audio controls src="files/ideale_2024_none.mp3" style="width: 100%; margin-bottom: 20px;" id="file1"></audio>
+        <div class="desc">
+          <ul>
+            <li><a href="/" onclick="seekTo('file1', 1); return false">Pick up the pieces</a></li>
+            <li><a href="/" onclick="seekTo('file1', 235); return false">I Wish</a></li>
+            <li><a href="/" onclick="seekTo('file1', 504); return false">It's your thing</a></li>
+            <li><a href="/" onclick="seekTo('file1', 712); return false">River keep running</a></li>
+            <li><a href="/" onclick="seekTo('file1', 960); return false">Cut me loose</a></li>
+            <li><a href="/" onclick="seekTo('file1', 1168); return false">Superstitions</a></li>
+            <li><a href="/" onclick="seekTo('file1', 1408); return false">Goon Squad</a></li>
+            <li><a href="/" onclick="seekTo('file1', 1714); return false">Staying alive</a></li>
+            <li><a href="/" onclick="seekTo('file1', 1972); return false">Canned heat</a></li>
+            <li><a href="/" onclick="seekTo('file1', 2190); return false">Soul with a capital S</a></li>
+            <li><a href="/" onclick="seekTo('file1', 2380); return false">I can't go for that</a></li>
+            <li><a href="/" onclick="seekTo('file1', 2636); return false">Crazy</a></li>
+            <li><a href="/" onclick="seekTo('file1', 2845); return false">Hold it down</a></li>
+            <li><a href="/" onclick="seekTo('file1', 3028); return false">Last night / Good times</a></li>
+            <li><a href="/" onclick="seekTo('file1', 3322); return false">Play that funky music</a></li>
+            <li><a href="/" onclick="seekTo('file1', 4611); return false">Master Blaster</a></li>
+            <li><a href="/" onclick="seekTo('file1', 4890); return false">Keep my baby dancing</a></li>
+            <li><a href="/" onclick="seekTo('file1', 5261); return false">Juice</a></li>
+            <li><a href="/" onclick="seekTo('file1', 5479); return false">He said / She said</a></li>
+            <li><a href="/" onclick="seekTo('file1', 5732); return false">Fin'em Fool em</a></li>
+            <li><a href="/" onclick="seekTo('file1', 5923); return false">Machistador</a></li>
+            <li><a href="/" onclick="seekTo('file1', 6136); return false">Le freak</a></li>
+            <li><a href="/" onclick="seekTo('file1', 6324); return false">When you gonna learn</a></li>
+            <li><a href="/" onclick="seekTo('file1', 6547); return false">Off the wall</a></li>
+            <li><a href="/" onclick="seekTo('file1', 7135); return false">Smoke</a></li>
+            <li><a href="/" onclick="seekTo('file1', 7515); return false">Miss you</a></li>
+            <li><a href="/" onclick="seekTo('file1', 7770); return false">Long train running</a></li>
+            <li><a href="/" onclick="seekTo('file1', 8060); return false">Uptown funk</a></li>
+          </ul>
+        </div>
+        <div class="gmap" style="padding-top: 20px">          
+          <label>
+            <input type="radio" name="instrument" onChange="remove('file1', 'none')" checked="true" style="float: left;" />
+            Tous les instruments
+          </label>
+          <label>
+            <input type="radio" name="instrument" onChange="remove('file1', 'guitar')" style="float: left;" />
+            Sans guitare
+          </label>
+          <label>
+            <input type="radio" name="instrument" onChange="remove('file1', 'bass')" style="float: left;" />
+            Sans basse
+          </label>
+          <label>
+            <input type="radio" name="instrument" onChange="remove('file1', 'voice')" style="float: left;" />
+            Sans voix
+          </label>
+          <label>
+            <input type="radio" name="instrument" onChange="remove('file1', 'brass')" style="float: left;" />
+            Sans cuivres
+          </label>
+        </div>
+      </div>
+
+    <div class="clearfix" style="height: 10px"></div>
+  </div>
+  <footer>
+    <p>
+      © Groove station 
+      <span id="copyright">
+          <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
+      </span>
+    </p>
+  </footer>
+</div>
+
+<script>
+function seekTo(player, seconds) {
+  var audio = document.getElementById(player);
+  audio.currentTime = seconds;
+  audio.play(); 
+  return false;
+}
+function remove(player, instrument) {
+  console.log(instrument);
+  var audio = document.getElementById(player);
+  audio.src = 'files/ideale_2024_' + instrument + '.mp3'
+}
+</script>
+
+</body>
+</html>
+
