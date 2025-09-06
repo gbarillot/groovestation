@@ -48,7 +48,7 @@ nav .brand  p {
 nav .burger {
   display: none;
   float: right;
-  width: 60px;
+  width: 40px;
   height: 48px;
   margin: 7px 6px;
   cursor: pointer;
@@ -371,7 +371,7 @@ footer p {
     padding-top: 5px;
   }
   .baseline h2 {
-    font-size: 4vw;
+    font-size: 14vw;
   }
   .form {
     float: none;
@@ -426,7 +426,7 @@ footer p {
 }
 @media only screen and (max-width: 480px) {
   .baseline h2 {
-    font-size: 16px;
+    font-size: 14vw;
   }
   .social {
     float: none;
