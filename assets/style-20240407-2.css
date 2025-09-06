@@ -51,18 +51,16 @@ nav .burger {
   width: 60px;
   height: 48px;
   margin: 7px 6px;
-  background-color: #bbb;
-  border: 1px solid #ddd;
-  border-radius: 4px;
   cursor: pointer;
 }
 nav .burger span {
   display: block;
   width: 80%;
-  height: 4px;
-  margin: 7px auto 10px auto;
+  height: 2px;
+  margin: 10px auto 10px auto;
   padding: 0;
-  background-color: #666;  
+  background-color: #aaa;  
+  border-radius: 10px; 
 }
 nav ul {
   margin: 0;
@@ -272,7 +270,7 @@ footer {
   clear: both;
   text-align: center;
   margin: 0;
-  padding: 0;
+  padding: 20px 0;
 }
 footer p {
   margin: 0;
@@ -404,7 +402,6 @@ footer p {
   }
   footer p {
     display: block;
-    padding: 10px;
     width: 90%;
   }
 }
@@ -488,8 +485,10 @@ footer p {
 }
 
 .page .inner > .illustration iframe {
+  display: block;
+  width: 100%;
+  height: auto;
   aspect-ratio: 1 / 1;
-  object-fit: cover;
 }
 
 /* Stack on smaller screens */
@@ -516,4 +515,96 @@ footer p {
   .page .inner.reverse > .content {
     order: 2;
   }
+}
+
+/* Visual polish for sections under .page */
+.page {
+  background: linear-gradient(180deg, #fff 0%, #fff 60%, #fafafa 100%);
+}
+
+/* Headings */
+.page .inner > h3 {
+  font-size: clamp(26px, 3vw, 36px);
+  line-height: 1.25;
+  letter-spacing: 0.2px;
+  margin: 0 0 8px 0;
+  color: #111;
+  text-align: left;
+}
+
+/* Content card */
+.page .inner > .content {
+  background: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+.page .inner > .content p {
+  line-height: 1.8;
+  color: #333;
+}
+
+/* Illustration card */
+.page .inner > .illustration {
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f7f7f7;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+.page .inner > .illustration img,
+.page .inner > .illustration video,
+.page .inner > .illustration iframe {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.45s ease;
+  will-change: transform;
+}
+.page .inner > .illustration:hover img,
+.page .inner > .illustration:hover video,
+.page .inner > .illustration:hover iframe {
+  transform: scale(1.02);
+}
+
+/* Section divider rhythm */
+.page .inner + .inner {
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  padding-top: 60px;
+}
+
+/* Link styling inside page */
+.page .inner a {
+  color: #e53935;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(229, 57, 53, 0.3);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.page .inner a:hover {
+  color: #c62828;
+  border-bottom-color: rgba(198, 40, 40, 0.55);
+}
+
+/* Responsive tweaks */
+@media only screen and (max-width: 1023px) {
+  .page .inner > .content {
+    padding: 18px;
+    border-radius: 10px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+  }
+  .page .inner > .illustration {
+    border-radius: 10px;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.07);
+  }
+  .page .inner + .inner {
+    padding-top: 40px;
+  }
+}
+
+/* Square corners for media in illustration blocks */
+.page .inner > .illustration,
+.page .inner > .illustration img,
+.page .inner > .illustration video,
+.page .inner > .illustration iframe {
+  border-radius: 0;
 }
