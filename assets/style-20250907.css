@@ -248,19 +248,62 @@ input, textarea {
   aspect-ratio: 16 / 9;
 }
 .date {
-  clear: both;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 120px; /* a bit tighter than 200px */
 }
 .date h2 {
-  font-size: 40px;
+  flex: 0 0 100%;
+  margin: 0 0 8px 0;
+  font-size: clamp(26px, 4vw, 40px);
+  border-bottom: 1px solid #999;
+  padding-bottom: 10px;
 }
-.desc {
-  float: left;
-  width: 50%;
-  font-size: 20px;
+.desc b {
+  font-size: 24px;
 }
+.desc,
 .gmap {
-  float: right;
-  width: 50%;
+  float: none;
+  width: auto;
+  flex: 1 1 420px;
+}
+
+/* Make embedded map responsive */
+.gmap iframe {
+  width: 100% !important;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  min-height: 280px;
+  border: 0;
+}
+
+/* Mobile tweaks */
+@media only screen and (max-width: 996px) {
+  .social,
+  .form {
+    flex: 1 1 100%;
+    margin: 10vh 3vw 0 3vw;
+  }
+  .date {
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 0 !important;
+  }
+
+  nav ul {
+    gap: 0; /* dropped menu is vertical */
+  }
+}
+
+/* Extra small spacing tuning */
+@media only screen and (max-width: 480px) {
+  .social,
+  .form {
+    margin: 6vh 3vw 0 3vw;
+  }
 }
 footer {
   border: 0;
@@ -344,6 +387,9 @@ footer p {
     float: none;
     width: 100%;
     margin-bottom: 20px;
+    flex: 0 0 auto;
+    height: auto;
+    min-height: auto;
   }
   .social.linkedin {
     position: absolute;
@@ -608,3 +654,5 @@ footer p {
 .page .inner > .illustration iframe {
   border-radius: 0;
 }
+
+/* Concerts: flex layout instead of floats */
