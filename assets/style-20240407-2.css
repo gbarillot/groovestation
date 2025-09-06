@@ -449,3 +449,71 @@ footer p {
     height: 200px !important 
   }
 }
+
+/* Content + Illustration layout */
+.page .inner {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.page .inner > h3 {
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin: 0;
+}
+.page .inner > .content {
+  flex: 0 0 calc(50% - 10px);
+  max-width: calc(50% - 10px);
+  margin: 0;
+  min-height: auto;
+  font-size: 20px;
+
+}
+.content p {
+  padding: 0 !important;
+  margin: 0;
+}
+.page .inner > .illustration {
+  flex: 0 0 calc(50% - 10px);
+  max-width: calc(50% - 10px);
+  margin: 0;
+}
+.page .inner > .illustration img,
+.page .inner > .illustration video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.page .inner > .illustration iframe {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+/* Stack on smaller screens */
+@media only screen and (max-width: 1023px) {
+  .page .inner {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .page .inner > .content,
+  .page .inner > .illustration {
+    flex: 0 0 100%;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .page .inner.reverse > h3 {
+    order: 0;
+  }
+  .page .inner.reverse > .illustration {
+    order: 1;
+  }
+  .page .inner.reverse > .content {
+    order: 2;
+  }
+}
