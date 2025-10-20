@@ -44,17 +44,18 @@ function loadGigs() {
 function showGigs(data) {
   var html = "";
   data.gigs.forEach(gig => {
+    const d = new Date(gig.start_at); // gig.start_at is UTC; Date will convert to local when formatting
     const formattedDate = new Intl.DateTimeFormat('fr-FR', {
-      day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Europe/Paris'
-    }).format(new Date(gig.start_at));
+      day: 'numeric', month: 'long', year: 'numeric'
+    }).format(d);
 
     const wd = new Intl.DateTimeFormat('fr-FR', {
-      weekday: 'long', timeZone: 'Europe/Paris'
-    }).format(new Date(gig.start_at));
+      weekday: 'long'
+    }).format(d);
 
     const cap = s => s.charAt(0).toUpperCase() + s.slice(1);
-    hour = gig.start_at.split('T')[1].split(':')[0];
-    minute = gig.start_at.split('T')[1].split(':')[1];
+    const hour = String(d.getHours()).padStart(2, '0');
+    const minute = String(d.getMinutes()).padStart(2, '0');
 
     html += `
       <div class="date">
@@ -89,18 +90,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function frenchWeekday(input) {
   const d = (input instanceof Date) ? input : new Date(input);
-  return new Intl.DateTimeFormat('fr-FR', { weekday: 'long', timeZone: 'Europe/Paris' }).format(d);
+  return new Intl.DateTimeFormat('fr-FR', { weekday: 'long' }).format(d);
 }
 
 function frenchMonth(input) {
   const d = (input instanceof Date) ? input : new Date(input);
-  return new Intl.DateTimeFormat('fr-FR', { month: 'long', timeZone: 'Europe/Paris' }).format(d);
+  return new Intl.DateTimeFormat('fr-FR', { month: 'long' }).format(d);
 }
 
 function frenchDateLong(input) {
   const d = (input instanceof Date) ? input : new Date(input);
   return new Intl.DateTimeFormat('fr-FR', {
-    weekday: 'long', day: 'numeric', month: 'long', year: 'numeric',
-    timeZone: 'Europe/Paris'
+    weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'
   }).format(d);
 }
